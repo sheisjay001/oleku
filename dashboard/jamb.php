@@ -84,7 +84,7 @@ requireLogin();
 
     <section class="bg-primary-900 text-white pb-20 pt-10 px-4 rounded-b-[3rem] shadow-xl relative overflow-hidden">
         <div class="container mx-auto px-4 text-center relative z-10">
-            <h1 class="text-4xl md:text-5xl font-bold mb-4">JAMB Dashboard</h1>
+            <h1 class="text-4xl md:text-5xl font-bold mb-4 text-white">JAMB Dashboard</h1>
             <p class="text-blue-200 mb-6">Access subjects, lessons, and CBT practice exams.</p>
         </div>
     </section>
