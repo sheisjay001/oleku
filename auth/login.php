@@ -28,7 +28,7 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
     $_SESSION['user_role'] = $account['role'] ?? (in_array($email, ADMIN_EMAILS, true) ? 'admin' : 'user');
     $_SESSION['email_verified'] = isEmailVerified($email);
     setFlash('success', 'Logged in');
-    $defaultNext = (isset($_SESSION['user_role']) && $_SESSION['user_role'] === 'admin') ? '/admin/' : '/dashboard/';
+    $defaultNext = (isset($_SESSION['user_role']) && $_SESSION['user_role'] === 'admin') ? '/admin/' : '/dashboard/index.php';
     $target = $next ?: $defaultNext;
     $redirectUrl = SITE_URL . '/' . ltrim($target, '/');
     redirect($redirectUrl);

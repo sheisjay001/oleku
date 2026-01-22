@@ -203,7 +203,7 @@ require_once 'includes/security.php';
                             <i class="fas fa-check-circle text-green-500"></i> Instant Performance Analysis
                         </li>
                     </ul>
-                    <a href="jamb-subjects.php" class="inline-block bg-primary-900 hover:bg-primary-800 text-white px-8 py-3 rounded-xl font-bold transition shadow-lg text-center">
+                    <a href="auth/get-started.php?next=jamb-subjects.php" class="inline-block bg-primary-900 hover:bg-primary-800 text-white px-8 py-3 rounded-xl font-bold transition shadow-lg text-center">
                         Start JAMB Preparation
                     </a>
                 </div>
@@ -275,7 +275,7 @@ require_once 'includes/security.php';
                     <h4 class="font-bold text-white mb-4">Platform</h4>
                     <ul class="space-y-2 text-sm">
                         <li><a href="#" class="hover:text-white transition">Home</a></li>
-                        <li><a href="jamb-subjects.php" class="hover:text-white transition">JAMB Prep</a></li>
+                        <li><a href="auth/get-started.php?next=jamb-subjects.php" class="hover:text-white transition">JAMB Prep</a></li>
                         <li><a href="auth/get-started.php?next=university/index.php" class="hover:text-white transition">University</a></li>
                         <li><a href="auth/login.php" class="hover:text-white transition">Login</a></li>
                     </ul>
