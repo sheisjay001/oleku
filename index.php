@@ -254,7 +254,7 @@ require_once 'includes/security.php';
     <?php include 'includes/ads.php'; ?>
 
     <!-- Footer -->
-    <footer class="bg-primary-900 text-white/80 py-12 border-t border-white/10">
+    <footer class="bg-primary-900 text-white py-12 border-t border-white/10">
         <div class="container mx-auto px-4">
             <div class="grid md:grid-cols-4 gap-8 mb-8">
                 <div class="col-span-1 md:col-span-2">
