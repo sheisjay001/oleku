@@ -123,8 +123,6 @@ $page_title = "JAMB Subjects | " . SITE_NAME;
                     <a href="<?php echo SITE_URL; ?>/auth/logout.php" class="bg-white/10 text-white px-4 py-3 rounded-lg hover:bg-white/20 transition font-medium">Logout</a>
                 <?php else: ?>
                     <a href="<?php echo SITE_URL; ?>/" class="text-white hover:text-primary-200 transition py-2">Home</a>
-                    <a href="<?php echo SITE_URL; ?>/jamb-subjects.php" class="text-white font-bold bg-white/10 rounded py-2">JAMB Prep</a>
-                    <a href="<?php echo SITE_URL; ?>/auth/login.php" class="text-white hover:text-primary-200 transition py-2">Login</a>
                     <a href="<?php echo SITE_URL; ?>/auth/get-started.php" class="bg-white text-primary-900 px-4 py-3 rounded-lg hover:bg-gray-100 transition font-bold">Get Started</a>
                 <?php endif; ?>
             </div>
@@ -135,7 +133,7 @@ $page_title = "JAMB Subjects | " . SITE_NAME;
     <header class="bg-primary-900 text-white pb-20 pt-10 px-4 rounded-b-[3rem] shadow-xl relative overflow-hidden">
         <div class="absolute inset-0 opacity-10 bg-[url('data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHdpZHRoPSI0MCIgaGVpZ2h0PSI0MCIgdmlld0JveD0iMCAwIDQwIDQwIj48ZyBmaWxsLXJ1bGU9ImV2ZW5vZGQiPjxwYXRoIGQ9Ik0wIDQwaDQwVjBIMHY0MHptMjAgMjBoMjBWMjBIMHYyMHpNNDAgNDBWMjBIMHYyMGg0MHoiIGZpbGw9IiNmZmYiIGZpbGwtb3BhY2l0eT0iMC4xIi8+PC9nPjwvc3ZnPg==')]"></div>
         <div class="container mx-auto max-w-5xl text-center relative z-10">
-            <h1 class="text-4xl md:text-6xl font-bold mb-6">JAMB UTME 2026 Preparation</h1>
+            <h1 class="text-4xl md:text-6xl font-bold mb-6 text-white">JAMB UTME 2026 Preparation</h1>
             <p class="text-xl text-blue-200 max-w-3xl mx-auto mb-8">
                 Comprehensive preparation for all JAMB UTME subjects. Study smart with our AI-powered platform and practice with CBT-style exams.
             </p>

@@ -85,8 +85,10 @@ require_once 'includes/security.php';
             <div class="flex items-center gap-6">
                 <div class="hidden md:flex items-center gap-6 text-sm font-medium">
                     <a href="index.php" class="hover:text-primary-200 transition">Home</a>
+                    <?php if (isset($_SESSION['user_id'])): ?>
                     <a href="jamb-subjects.php" class="hover:text-primary-200 transition">JAMB Prep</a>
                     <a href="auth/get-started.php?next=university/index.php" class="hover:text-primary-200 transition">University</a>
+                    <?php endif; ?>
                     
                     <?php if (isset($_SESSION['user_id'])): ?>
                         <a href="<?php echo (isset($_SESSION['user_role']) && $_SESSION['user_role']==='admin') ? 'admin/' : 'dashboard/'; ?>" class="bg-white/10 px-4 py-2 rounded-lg hover:bg-white/20 transition">Dashboard</a>
@@ -119,7 +121,6 @@ require_once 'includes/security.php';
                 <?php if (isset($_SESSION['user_id'])): ?>
                     <a href="<?php echo (isset($_SESSION['user_role']) && $_SESSION['user_role']==='admin') ? 'admin/' : 'dashboard/'; ?>" class="bg-white/10 text-white px-4 py-3 rounded-lg hover:bg-white/20 transition font-medium">Dashboard</a>
                 <?php else: ?>
-                    <a href="auth/login.php" class="text-white hover:text-primary-200 transition py-2">Login</a>
                     <a href="auth/get-started.php" class="bg-white text-primary-900 px-4 py-3 rounded-lg hover:bg-gray-100 transition font-bold">Get Started</a>
                 <?php endif; ?>
             </div>
@@ -138,6 +139,7 @@ require_once 'includes/security.php';
             <p class="text-xl text-blue-100 mb-10 max-w-2xl mx-auto leading-relaxed">
                 Personalized AI assistance for JAMB UTME candidates and University students. Study smarter, not harder.
             </p>
+            <?php if (!isset($_SESSION['user_id'])): ?>
             <div class="flex flex-col sm:flex-row justify-center gap-4">
                 <a href="auth/get-started.php?next=jamb-subjects.php" class="bg-white text-primary-900 hover:bg-gray-100 px-8 py-4 rounded-xl font-bold shadow-lg shadow-blue-900/20 transition transform hover:-translate-y-1 flex items-center justify-center gap-2">
                     <i class="fas fa-graduation-cap"></i> Start JAMB Prep
@@ -146,6 +148,7 @@ require_once 'includes/security.php';
                     <i class="fas fa-university"></i> University Students
                 </a>
             </div>
+            <?php endif; ?>
         </div>
     </section>
 
@@ -237,9 +240,11 @@ require_once 'includes/security.php';
                             <i class="fas fa-chalkboard-teacher text-purple-400"></i> 24/7 AI Tutor
                         </li>
                     </ul>
+                    <?php if (!isset($_SESSION['user_id'])): ?>
                     <a href="auth/get-started.php?next=university/index.php" class="inline-block bg-white text-primary-900 hover:bg-gray-100 px-8 py-3 rounded-xl font-bold transition shadow-lg text-center">
                         Try AI Assistant
                     </a>
+                    <?php endif; ?>
                 </div>
             </div>
         </div>
