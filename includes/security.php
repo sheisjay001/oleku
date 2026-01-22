@@ -27,4 +27,3 @@ header("Content-Security-Policy: default-src 'self' https: data:; script-src 'se
 
 // Disable PHP version exposure
 header('X-Powered-By: Oleku Platform');
-?>

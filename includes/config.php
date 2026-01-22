@@ -22,7 +22,7 @@ if (php_sapi_name() === 'cli') {
     define('SITE_URL', 'http://localhost:8000');
 } elseif ($host === 'localhost' || $host === '127.0.0.1') {
     // Assuming the project folder is 'oleku' in htdocs
-    define('SITE_URL', 'http://localhost/oleku');
+    define('SITE_URL', 'http://' . $host . '/oleku');
 } elseif ($host === 'localhost:8000') {
     define('SITE_URL', 'http://localhost:8000');
 } else {

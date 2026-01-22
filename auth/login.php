@@ -2,8 +2,15 @@
 require_once __DIR__ . '/../includes/config.php';
 require_once __DIR__ . '/../includes/functions.php';
 require_once __DIR__ . '/../includes/security.php';
+
+// If already logged in, redirect to dashboard
+if (isLoggedIn()) {
+    $defaultNext = (isset($_SESSION['user_role']) && $_SESSION['user_role'] === 'admin') ? '/admin/' : '/dashboard/index.php';
+    redirect(SITE_URL . $defaultNext);
+}
+
 $next = sanitize($_GET['next'] ?? ($_POST['next'] ?? ''));
-if ($next === '') { $next = '/dashboard/'; }
+if ($next === '') { $next = '/dashboard/index.php'; }
 if (strpos($next, 'http') === 0) { $next = '/'; }
 if ($_SERVER['REQUEST_METHOD'] === 'POST') {
     if (!validate_csrf()) {
@@ -22,15 +29,30 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
         setFlash('error', 'Incorrect email or password');
         redirect(SITE_URL . '/auth/login.php?next=' . urlencode($next));
     }
+    
+    // Regenerate session ID to prevent session fixation
+    session_regenerate_id(true);
+    
     $_SESSION['user_id'] = 'u_' . $account['id'];
     $_SESSION['user_email'] = $email;
     $_SESSION['user_name'] = $account['name'] ?? '';
     $_SESSION['user_role'] = $account['role'] ?? (in_array($email, ADMIN_EMAILS, true) ? 'admin' : 'user');
     $_SESSION['email_verified'] = isEmailVerified($email);
     setFlash('success', 'Logged in');
+    
     $defaultNext = (isset($_SESSION['user_role']) && $_SESSION['user_role'] === 'admin') ? '/admin/' : '/dashboard/index.php';
     $target = $next ?: $defaultNext;
+    
+    // Prevent redirect loop if target is login page
+    if (strpos($target, 'login.php') !== false) {
+        $target = $defaultNext;
+    }
+    
     $redirectUrl = SITE_URL . '/' . ltrim($target, '/');
+    
+    // Ensure session is written before redirect
+    session_write_close();
+    
     redirect($redirectUrl);
 }
 ?>

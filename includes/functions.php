@@ -355,7 +355,17 @@ function time_ago($datetime) {
  * @param string $url
  */
 function redirect($url) {
-    header("Location: $url");
+    // Ensure session is saved before redirecting
+    if (session_status() === PHP_SESSION_ACTIVE) {
+        session_write_close();
+    }
+    
+    if (!headers_sent()) {
+        header("Location: $url");
+    } else {
+        echo "<script>window.location.href='$url';</script>";
+        echo "<meta http-equiv='refresh' content='0;url=$url'>";
+    }
     exit;
 }
 
