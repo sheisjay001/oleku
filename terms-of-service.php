@@ -63,7 +63,7 @@ $page_title = "Terms of Service | " . SITE_NAME;
     <footer class="text-white pt-16 pb-8" style="background-color:#0B2C4D">
         <div class="container mx-auto px-4">
             <div class="border-t border-gray-800 pt-8 text-center">
-                <p class="text-gray-400 text-sm mb-4">
+                <p class="text-white text-sm mb-4">
                     &copy; <?php echo date('Y'); ?> Oleku. All rights reserved.
                 </p>
                 <div class="flex justify-center space-x-6">

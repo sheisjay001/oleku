@@ -283,7 +283,7 @@ require_once 'includes/security.php';
                     </ul>
                 </div>
             </div>
-            <div class="border-t border-white/10 pt-8 text-center text-sm text-white/80">
+            <div class="border-t border-white/10 pt-8 text-center text-sm text-white">
                 <p>&copy; <?php echo date('Y'); ?> Oleku. All rights reserved.</p>
             </div>
         </div>
