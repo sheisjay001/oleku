@@ -138,7 +138,7 @@ $stats = [
         <div class="container mx-auto max-w-5xl relative z-10">
             <div class="flex flex-col md:flex-row justify-between items-center gap-6">
                 <div>
-                    <h1 class="text-3xl md:text-5xl font-bold mb-2">Welcome back, <?php echo htmlspecialchars(explode(' ', $name)[0]); ?>! 👋</h1>
+                    <h1 class="text-3xl md:text-5xl font-bold mb-2 text-white">Welcome back, <?php echo htmlspecialchars(explode(' ', $name)[0]); ?>! 👋</h1>
                     <p class="text-blue-200 text-lg">Ready to crush your academic goals today?</p>
                 </div>
                 <div class="flex gap-3">
