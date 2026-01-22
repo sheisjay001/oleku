@@ -1,11 +1,27 @@
 {
-  "rewrites": [
-    { "source": "/api/(.*)", "destination": "https://oleku.wuaze.com/api/$1" },
-    { "source": "/assets/(.*)", "destination": "https://oleku.wuaze.com/assets/$1" },
-    { "source": "/uploads/(.*)", "destination": "https://oleku.wuaze.com/uploads/$1" },
-    { "source": "/(.*)", "destination": "https://oleku.wuaze.com/$1" }
+  "functions": {
+    "*.php": { "runtime": "vercel-php@0.6.2" },
+    "**/*.php": { "runtime": "vercel-php@0.6.2" }
+  },
+  "routes": [
+    {
+      "src": "/assets/(.*)",
+      "dest": "/assets/$1"
+    },
+    {
+      "src": "/(.*)",
+      "dest": "/$1"
+    }
   ],
   "headers": [
+    {
+      "source": "/(.*)",
+      "headers": [
+        { "key": "X-Content-Type-Options", "value": "nosniff" },
+        { "key": "X-Frame-Options", "value": "DENY" },
+        { "key": "X-XSS-Protection", "value": "1; mode=block" }
+      ]
+    },
     {
       "source": "/(manifest.json|sw.js)",
       "headers": [
