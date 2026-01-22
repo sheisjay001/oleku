@@ -1,0 +1,4 @@
+- MONGO_URI
+
+
+mongodb+srv://autajoy2003_db_user:FWD9iw1EDpdeFwVI@owoo.3bu4won.mongodb.net/ai-scheduler?appName=owoo

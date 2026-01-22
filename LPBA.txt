@@ -1,0 +1,105 @@
+
+
+
+# LBPA Funnel Analytics Implementation
+
+## Purpose
+This README outlines the steps to implement minimal but actionable funnel analytics for the LBPA system. The goal is to provide visibility into leads, conversions, applications, and revenue without adding unnecessary complexity.
+
+---
+
+## Step 1: Database Preparation
+
+Ensure the following tables/collections exist and are up-to-date:
+
+**Leads Table**
+- Fields: `id`, `state`, `created_at`, `updated_at`, `automation_enabled`, `human_required`
+
+**Lead State Logs**
+- Fields: `lead_id`, `old_state`, `new_state`, `timestamp`
+
+**Applications**
+- Fields: `lead_id`, `score`, `status` (APPLIED, ACCEPTED, REJECTED)
+
+**Payments**
+- Fields: `lead_id`, `program_type`, `amount`, `status`, `timestamp`
+
+Optional:
+- `Programs` table for per-program analytics
+
+**Notes:**
+- All timestamp fields must be present for historical analysis.
+- Lead states must be consistent (Phase 1 enforcement ensures this).
+
+---
+
+## Step 2: Define Core Metrics
+
+**1. Leads per state**
+- Counts leads grouped by their current state.
+- Helps identify bottlenecks in the funnel.
+
+**2. Online program conversion rate**
+- Formula: `# of leads who paid for online program / # of leads who received online invitation`.
+- Focus on automation-enabled or approved invitations.
+
+**3. Application-to-acceptance ratio**
+- Formula: `# of accepted applications / # of submitted applications`.
+- Useful for physical programs.
+
+**4. Monthly revenue**
+- Sum of successful payments grouped by month and program type.
+
+---
+
+## Step 3: Aggregation Queries
+
+Example pseudo-SQL queries:
+
+```sql
+-- Leads per state
+SELECT state, COUNT(*) AS total
+FROM leads
+GROUP BY state;
+
+-- Online program conversion
+SELECT 
+  COUNT(p.id) * 100.0 / COUNT(l.id) AS conversion_rate
+FROM leads l
+LEFT JOIN payments p ON l.id = p.lead_id
+WHERE l.state = 'ONLINE_CLIENT' AND p.program_type = 'online' AND p.status = 'SUCCESS';
+
+-- Application-to-acceptance ratio
+SELECT
+  COUNT(*) FILTER (WHERE status='ACCEPTED') * 1.0 / COUNT(*) AS acceptance_ratio
+FROM applications;
+
+-- Monthly revenue
+SELECT
+  DATE_TRUNC('month', timestamp) AS month,
+  SUM(amount) AS revenue
+FROM payments
+WHERE status = 'SUCCESS'
+GROUP BY month
+ORDER BY month;
+
+
+Step 4: Build the Dashboard
+
+Essential Components
+
+Numeric tiles: total leads, conversion rate, monthly revenue
+
+Bar chart: leads per state
+
+Line chart: monthly revenue trends
+
+Table: application-to-acceptance ratio by program
+
+UI Guidelines
+
+Single admin page
+
+Use colors to highlight bottlenecks (red) and healthy states (green)
+
+Optional: allow filters by week/month

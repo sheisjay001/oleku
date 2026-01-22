@@ -1,0 +1,35 @@
+# Environment variables
+.env
+
+# Sensitive configuration files
+config/database.php
+config/secrets.php
+
+# Logs
+/logs/
+*.log
+
+# Dependencies
+/vendor/
+/node_modules/
+
+# System Files
+.DS_Store
+Thumbs.db
+
+# IDE specific files
+.idea/
+.vscode/
+*.sublime-workspace
+*.sublime-project
+
+# Local development environment
+.env.local
+.env.*.local
+
+# Cache
+/cache/
+*.cache
+
+# Uploads
+/uploads/

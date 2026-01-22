@@ -1,0 +1,1 @@
+i will build a one page website wihtout user authentication, a website that uses ai and students sends a snapshot of their school work and it wilgenerate comprehensive answers

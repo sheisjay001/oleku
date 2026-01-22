@@ -1,0 +1,38 @@
+### 1. 🧠 AI Intelligence (Priority)
+- Service: OpenAI API
+- Why: To generate the actual captions, scripts, and strategy ideas.
+- Cost: Pay-per-use (approx. $5-10/month for heavy use).
+- Env Variable: OPENAI_API_KEY
+
+### 2. 💳 Payments & Billing
+- Service: Stripe
+- Why: To process credit card payments for your subscription tiers (Starter, Pro, Agency).
+- Cost: Transaction fees (2.9% + 30¢).
+- Env Variables:
+  - STRIPE_SECRET_KEY
+  - STRIPE_PUBLISHABLE_KEY (Frontend)
+  - STRIPE_WEBHOOK_SECRET
+
+### 3. 📧 Email Newsletters
+- Service: Resend (Recommended) or SendGrid
+- Why: To actually send the newsletters to your subscriber list.
+- Cost: Free tiers available (Resend offers 3,000 emails/mo for free).
+- Env Variable: RESEND_API_KEY or SENDGRID_API_KEY
+
+### 4. 📱 Social Media Platforms
+- Instagram & Facebook: Meta Graph API
+- LinkedIn: LinkedIn API (via Developer Portal)
+- X (Twitter): X API (Basic tier required for posting)
+- Why: To publish posts automatically without human intervention.
+- Env Variables: LINKEDIN_ACCESS_TOKEN , INSTAGRAM_ACCESS_TOKEN , etc.
+
+### 5. 🎙️ Podcast Distribution
+- Spotify: Spotify Web API
+- YouTube: YouTube Data API v3
+- Why: To upload audio and video podcasts programmatically.
+- Env Variables: SPOTIFY_CLIENT_ID , YOUTUBE_API_KEY
+
+
+
+
+

@@ -1,0 +1,81 @@
+based on what the website is about:An AI powered EdTech website that teaches university students in Nigeria whatever course they are studying, they will just take a picture of their resource material and it will break it down in the simplest way possible for them. I  also want in that same website a full JAMB UTME subjects(using the the latest jamb curriculum) for secondary school students, so they can study. As well as, timed quizzes(60 English questions, and 40 questions each for all other subjects). And it will be 2 hours for the total quiz(that is English and 4 other subjects). English as a mandatory subject by jamb utme that is why it must be in all quizzes and must be of 60 questions, fix this:Oleku JAMB Tutor
+Home JAMB Subjects AI Tutor Practice Quiz
+Login
+Sign Up
+
+Home JAMB Subjects AI Tutor Practice Quiz
+Login Sign Up
+
+
+Ensure my SITE_NAME constant is defined in my configuration file.
+
+how do i now intergrate AI that would allow students to upload study materials and get AI-powered explanations
+
+Database Integration: Connect to a database to store questions, user progress, and results
+User Authentication: Implement user accounts to track progress
+Question Bank: Populate with actual JAMB past questions
+AI Tutor Backend: Develop the AI processing for study materials
+Admin Panel: For managing questions and content
+
+
+
+
+
+Install PHP Extensions:
+Enable fileinfo, gd, and curl extensions in your PHP installation
+Install Composer Dependencies (for PDF parsing):
+bash
+composer require smalot/pdfparser
+Set Up Tesseract OCR (for image text extraction):
+On Ubuntu: sudo apt install tesseract-ocr
+On Windows: Download and install from GitHub - UB-Mannheim/tesseract
+Get an OpenAI API Key:
+Sign up at OpenAI
+Create an API key in the dashboard
+Store it securely in your environment variables
+5. Security Considerations
+File Upload Security:
+Validate file types on both client and server side
+Scan uploaded files for malware
+Store files outside the web root when possible
+Set proper file permissions
+API Key Security:
+Never expose your OpenAI API key in client-side code
+Use environment variables to store sensitive information
+Consider implementing rate limiting
+User Authentication:
+Implement user authentication to track usage
+Set usage limits to prevent abuse
+6. Testing the Implementation
+Upload a PDF or image file
+Ask a question about the content
+The system should process the file and provide an AI-generated response
+7. Next Steps for Enhancement
+Implement User Accounts:
+Track user history
+Save favorite explanations
+Set up personalized learning paths
+Add More File Processing:
+Support for Word documents
+Support for PowerPoint presentations
+Support for handwritten notes
+Enhance AI Capabilities:
+Add subject-specific tutoring
+Implement spaced repetition for learning
+Add quiz generation from study materials
+Performance Optimization:
+Implement caching for common queries
+Optimize file processing
+Add background job processing for large files
+
+
+
+
+Parse error: syntax error, unexpected end of file, expecting "elseif" or "else" or "endif" in /home/vol1_7/infinityfree.com/if0_40673034/htdocs/includes/header.php on line 417
+
+
+
+the ui design shold take thhis style(navy blue background,white fir the writ ups, and the buttons should be maton and white write up on them): https://miva.edu.ng/
+
+
+

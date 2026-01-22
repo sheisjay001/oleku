@@ -1,0 +1,73 @@
+oleku/
+├── assets/
+│   ├── css/
+│   │   └── style.css
+│   ├── js/
+│   │   └── main.js
+│   └── images/
+│       └── hero-image.jpg
+├── includes/
+│   ├── config.php
+│   ├── header.php
+│   └── footer.php
+├── jamb/
+│   ├── jamb-english.php
+│   ├── jamb-mathematics.php
+│   ├── jamb-physics.php
+│   ├── jamb-chemistry.php
+│   ├── jamb-biology.php
+│   └── jamb-subjects.php
+├── university/
+│   └── index.php
+├── dashboard/
+│   └── index.php
+├── auth/
+│   ├── login.php
+│   └── register.php
+├── index.php
+└── README.md
+
+
+
+
+the university students button should have the same background as the start jamb prep button:
+
+
+
+
+ line 31, which is jamb-subjects should redirect users to the signup/signin page, then when they sign up and sign in, they would be redirected straight to jamb-subjects. and for line 32, which is university students should redirect users to the signup/signin page, then when they sign up and sign in, they would be redirected straight to university
+
+
+when users click on the ger started here, they should be redirected to this place #File:
+
+Cannot validate since a PHP installation could not be found. Use the setting 'php.validate.executablePath' to configure the PHP executable.
+
+
+
+
+
+after a user signs up or logs in from here , there ahould be the jamb prep subjects there for all subjects
+the text on line 202 should be white on the website and remove lines 23,24 and 29
+
+
+
+
+on line 103, let the Try AI Study Assistant writeup have a visible colour before transition and on line 79, let Start JAMB Preparation have a visible colou before transition
+
+
+
+create and build user(jamb candidates and university students) and admin dashboard, so that users and admins can have a place to be redirected after signing up
+
+
+
+Joy Auta
+
+1) there should be a logout option in the dash board, 2)when users or admins logs out, the login page should be what they sould be redirected to. 3)when i users or admins click home after being logged in, they shuld be redirected to their dashboard. 4)for the cbt examsc change the questions to a total of 180 questions(english 60 questions and other subjects 40 questios each). 5) there should be a forgot password writeup beneath the login page for the retrival of passwords for those who forgot their password
+
+if the receiving of reset link to the mails of user is not feasible, jsut create a reset pages where users can just set new password. the users should type their old password(so as to ensure the old password is in the database), then type in thier new password and confirm the new password , and a rest password button should be below the form that redirects them to the login page after the new password has been saved to the database
+
+Builder
+
+
+the summaries, simplified explanations and practices are not being provided, and the literature, economis and government questions are repeated all through the cbt exams. also, fix the questions, they should be uniquesly set, you can use ai with conjunction with jamb syllabus to set those questions And lastly, the cbt exams are not timed
+Builder

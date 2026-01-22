@@ -1,0 +1,13 @@
+add this ad banner to the website: <script type="text/javascript">
+  atOptions = {
+  	'key' : '7928372280ba60876a1742d3e14bdfd0',
+  	'format' : 'iframe',
+  	'height' : 60,
+  	'width' : 468,
+  	'params' : {}
+  };
+</script>
+<script
+  type="text/javascript"
+  src=""
+></script>

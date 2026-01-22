@@ -1,0 +1,16 @@
+{
+  "rewrites": [
+    { "source": "/api/(.*)", "destination": "https://oleku.wuaze.com/api/$1" },
+    { "source": "/assets/(.*)", "destination": "https://oleku.wuaze.com/assets/$1" },
+    { "source": "/uploads/(.*)", "destination": "https://oleku.wuaze.com/uploads/$1" },
+    { "source": "/(.*)", "destination": "https://oleku.wuaze.com/$1" }
+  ],
+  "headers": [
+    {
+      "source": "/(manifest.json|sw.js)",
+      "headers": [
+        { "key": "Cache-Control", "value": "public, max-age=0, must-revalidate" }
+      ]
+    }
+  ]
+}

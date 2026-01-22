@@ -1,0 +1,91 @@
+Test Text: Biology is the study of life. Cells are the basic unit of life. Photosynthesis occurs in chloroplasts.
+Fallback Questions Generated: 3
+Array
+(
+    [0] => Array
+        (
+            [question] => Fill in the blank: __________ is closely related to 'life'.
+            [options] => Array
+                (
+                    [0] => pre-life
+                    [1] => non-life
+                    [2] => lifes
+                    [3] => life
+                )
+
+            [answer] => D
+        )
+
+    [1] => Array
+        (
+            [question] => Fill in the blank: __________ is closely related to 'biology'.
+            [options] => Array
+                (
+                    [0] => non-biology
+                    [1] => biologys
+                    [2] => biology
+                    [3] => pre-biology
+                )
+
+            [answer] => C
+        )
+
+    [2] => Array
+        (
+            [question] => Fill in the blank: __________ is closely related to 'study'.
+            [options] => Array
+                (
+                    [0] => studys
+                    [1] => non-study
+                    [2] => study
+                    [3] => pre-study
+                )
+
+            [answer] => C
+        )
+
+)
+ai_generate_practice_questions exists.
+Calling perform_ai_task('practice_questions')...
+Result: Array
+(
+    [ok] => 1
+    [data] => Array
+        (
+            [questions] => Array
+                (
+                    [0] => Array
+                        (
+                            [question] => What is the primary function of the mitochondria in a cell?
+                            [options] => Array
+                                (
+                                    [0] => To synthesize proteins
+                                    [1] => To store genetic information
+                                    [2] => To generate energy for the cell
+                                    [3] => To regulate cell growth
+                                )
+
+                            [answer] => C
+                        )
+
+                    [1] => Array
+                        (
+                            [question] => Which of the following biological molecules contains the genetic instructions for the development and function of an organism?
+                            [options] => Array
+                                (
+                                    [0] => Carbohydrates
+                                    [1] => Lipids
+                                    [2] => Proteins
+                                    [3] => Nucleic acids
+                                )
+
+                            [answer] => D
+                        )
+
+                )
+
+        )
+
+)
+
+DB Prepare successful.

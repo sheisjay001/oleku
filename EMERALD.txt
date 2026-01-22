@@ -1,0 +1,52 @@
+server error when trying to sign up  and login. and for the vendor verification, they are to upload a photo of their cac certificate and their shop where they sell the gadgets
+
+HOST:
+
+gateway01.us-east-1.prod.aws.tidbcloud.com
+
+PORT:
+
+4000
+
+USERNAME:
+
+31PykZKRE4ZZXJf.root
+
+PASSWORD:
+
+34WT8plu1KFonrH3
+
+DATABASE:
+
+test
+
+CA:
+
+<CA_PATH>. REMOVE THE PRISMA THING AND USE TIDB
+
+
+
+
+
+
+
+
+
+
+PWA Install Prompt task in the list. Would you like me to tackle that next to make the app installable on mobile devices?
+
+
+
+.
+.
+push to git: https://github.com/sheisjay001/RoyalRelish
+
+
+make this web app professional, and let there be a homepage boldly stating what the web app is about and make this a a proper web app that i can charge 70,000 dollars for its quality, design and functionality
+
+
+what other improvemets with respect to usability, functinality, design and color combination and security do you know should be added to make it world class
+
+
+
+add an ai trade analyser and trade executioner that users can connect thier trading accounts to and whatever is anlused will be traded following their inputted risk to reward and risk percentage
