@@ -3,16 +3,6 @@
     "*.php": { "runtime": "vercel-php@0.6.2" },
     "**/*.php": { "runtime": "vercel-php@0.6.2" }
   },
-  "routes": [
-    {
-      "src": "/assets/(.*)",
-      "dest": "/assets/$1"
-    },
-    {
-      "src": "/(.*)",
-      "dest": "/$1"
-    }
-  ],
   "headers": [
     {
       "source": "/(.*)",
