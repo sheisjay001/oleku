@@ -229,7 +229,7 @@ require_once 'includes/security.php';
     </section>
 
     <!-- Footer -->
-    <footer class="bg-primary-900 text-white/60 py-8 border-t border-white/10 mt-auto">
+    <footer class="bg-primary-900 text-white py-8 border-t border-white/10 mt-auto">
         <div class="container mx-auto px-4 text-center">
             <p>&copy; <?php echo date('Y'); ?> Oleku. Built for Excellence.</p>
         </div>

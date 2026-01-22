@@ -119,9 +119,11 @@ class DbSessionHandler implements SessionHandlerInterface {
 
 // Start session if not already started
 if (session_status() === PHP_SESSION_NONE) {
-    // Use DB handler
-    $handler = new DbSessionHandler($pdo);
-    session_set_save_handler($handler, true);
+    // Use DB handler only in production to avoid localhost issues
+    if (DB_HOST !== 'localhost') {
+        $handler = new DbSessionHandler($pdo);
+        session_set_save_handler($handler, true);
+    }
 
     // Set session cookie parameters
     session_set_cookie_params([
