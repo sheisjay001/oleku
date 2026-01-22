@@ -4,10 +4,10 @@ require_once __DIR__ . '/../includes/functions.php';
 require_once __DIR__ . '/../includes/security.php';
 
 // If already logged in, redirect to dashboard
-if (isLoggedIn()) {
-    $defaultNext = (isset($_SESSION['user_role']) && $_SESSION['user_role'] === 'admin') ? '/admin/' : '/dashboard/index.php';
-    redirect(SITE_URL . $defaultNext);
-}
+// if (isLoggedIn()) {
+//    $defaultNext = (isset($_SESSION['user_role']) && $_SESSION['user_role'] === 'admin') ? '/admin/' : '/dashboard/index.php';
+//    redirect(SITE_URL . $defaultNext);
+// }
 
 $next = sanitize($_GET['next'] ?? ($_POST['next'] ?? ''));
 if ($next === '') { $next = '/dashboard/index.php'; }

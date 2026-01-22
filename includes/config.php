@@ -34,6 +34,15 @@ define('ADMIN_EMAILS', ['soteriamaa@gmail.com']);
 
 // Start session if not already started
 if (session_status() === PHP_SESSION_NONE) {
+    // Set session cookie parameters to ensure they are valid for the entire domain
+    session_set_cookie_params([
+        'lifetime' => 0,
+        'path' => '/',
+        'domain' => '', // Default to current domain
+        'secure' => isset($_SERVER['HTTPS']), // Only secure if HTTPS
+        'httponly' => true,
+        'samesite' => 'Lax'
+    ]);
     session_start();
 }
 
