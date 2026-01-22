@@ -263,7 +263,7 @@ require_once 'includes/security.php';
                         <span class="text-xl font-bold">Oleku</span>
                     </div>
                     <p class="text-sm leading-relaxed max-w-xs mb-6 text-white">
-                        Empowering Nigerian students with cutting-edge AI tools for academic excellence. Built with ❤️ for excellence.
+                        Empowering Nigerian students with cutting-edge AI tools for academic excellence. Built with love for excellence.
                     </p>
                     <div class="flex gap-4">
                         <a href="#" class="w-10 h-10 rounded-full bg-white/10 flex items-center justify-center hover:bg-white/20 transition"><i class="fab fa-twitter"></i></a>
