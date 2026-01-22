@@ -51,6 +51,7 @@ try {
     ];
     
     if (DB_PORT === '4000') {
+        $options[PDO::MYSQL_ATTR_SSL_CA] = __DIR__ . '/cacert.pem';
         $options[PDO::MYSQL_ATTR_SSL_VERIFY_SERVER_CERT] = false; 
     }
 
